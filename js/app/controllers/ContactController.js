@@ -10,9 +10,18 @@ function ContactController() {
         phone: '0684059433'
     }];
 
-    this.removeContact = function (index) {
+    this.removeContact = function(index) {
         this.contacts.splice(index, 1);
-    }
+    },
+
+    this.addContact = function(){
+        this.contacts.push({
+            name: this.name,
+            phone: this.phoneNumber
+        });
+        this.name = '';
+        this.phoneNumber = '';
+    };
 }
 
 angular
